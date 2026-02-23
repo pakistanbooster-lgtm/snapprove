@@ -30,7 +30,7 @@ const HeroSection = () => {
             Start Free — 5 Deals
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
-          <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6">
+          <Button size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 text-lg px-8 py-6" onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}>
             Watch Demo
           </Button>
         </div>
