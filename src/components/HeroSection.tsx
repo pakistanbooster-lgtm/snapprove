@@ -1,5 +1,6 @@
 import heroBg from "@/assets/hero-bg.jpg";
 import { Button } from "@/components/ui/button";
+import GetStartedForm from "@/components/GetStartedForm";
 import { Shield, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
@@ -26,10 +27,12 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-          <Button size="lg" className="gradient-primary border-0 text-primary-foreground text-lg px-8 py-6 shadow-brand animate-pulse-glow">
-            Start Free — 5 Deals
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          <GetStartedForm trigger={
+            <Button size="lg" className="gradient-primary border-0 text-primary-foreground text-lg px-8 py-6 shadow-brand animate-pulse-glow">
+              Start Free — 5 Deals
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          } />
           <Button size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 text-lg px-8 py-6" onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}>
             Watch Demo
           </Button>
