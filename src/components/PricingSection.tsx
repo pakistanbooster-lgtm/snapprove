@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import GetStartedForm from "@/components/GetStartedForm";
 
 const plans = [
   {
@@ -60,26 +61,27 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="py-24 bg-muted/50">
-      <div className="container mx-auto px-4">
+    <section id="pricing" className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background pointer-events-none" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <span className="text-sm font-semibold text-secondary uppercase tracking-wider">Pricing</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mt-3 mb-4">
-            Simple, Transparent Pricing
+            Simple, <span className="text-gradient">Transparent</span> Pricing
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-lg">
             Start free, upgrade when you need more. All prices in PKR.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative bg-card rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 ${
+              className={`relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 ${
                 plan.popular
-                  ? "border-secondary shadow-brand scale-[1.02]"
-                  : "border-border hover:shadow-brand"
+                  ? "border border-secondary/50 bg-card shadow-brand"
+                  : "card-glow"
               }`}
             >
               {plan.popular && (
@@ -108,13 +110,15 @@ const PricingSection = () => {
                 ))}
               </ul>
 
-              <Button
-                className={`w-full ${plan.popular ? "gradient-primary border-0 text-primary-foreground" : ""}`}
-                variant={plan.popular ? "default" : "outline"}
-                size="lg"
-              >
-                {plan.cta}
-              </Button>
+              <GetStartedForm trigger={
+                <Button
+                  className={`w-full rounded-full ${plan.popular ? "gradient-primary border-0 text-primary-foreground" : "border-border"}`}
+                  variant={plan.popular ? "default" : "outline"}
+                  size="lg"
+                >
+                  {plan.cta}
+                </Button>
+              } />
             </div>
           ))}
         </div>

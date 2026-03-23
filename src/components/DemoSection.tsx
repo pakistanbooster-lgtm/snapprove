@@ -1,18 +1,19 @@
 const DemoSection = () => {
   return (
-    <section id="demo" className="py-24 gradient-dark">
-      <div className="container mx-auto px-4">
+    <section id="demo" className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background pointer-events-none" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <span className="text-sm font-semibold text-secondary uppercase tracking-wider">Product Demo</span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mt-3 mb-4">
-            See SnapProve in Action
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mt-3 mb-4">
+            See SnapProve <span className="text-gradient">in Action</span>
           </h2>
-          <p className="text-primary-foreground/70 max-w-xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-xl mx-auto text-lg">
             Watch how easy it is to create a Deal Certificate and share it with Deal Share.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-brand border border-secondary/20">
+        <div className="max-w-4xl mx-auto card-glow rounded-2xl overflow-hidden">
           <video
             autoPlay
             loop
