@@ -23,6 +23,11 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
+          <Button size="sm" variant="outline" className="rounded-full px-5" asChild>
+            <a href="https://drive.google.com/file/d/1MKv5OZEzVzuUPnlpNFBYQG-1eqwC-NsQ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              Download App
+            </a>
+          </Button>
           <GetStartedForm trigger={
             <Button size="sm" className="gradient-primary border-0 text-primary-foreground rounded-full px-6">
               Get Started
