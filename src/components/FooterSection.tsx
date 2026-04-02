@@ -37,7 +37,12 @@ const FooterSection = () => {
               <ul className="space-y-2">
                 {col.links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
+                    <a
+                      href={link === "Download App" ? "https://drive.google.com/file/d/1MKv5OZEzVzuUPnlpNFBYQG-1eqwC-NsQ/view?usp=sharing" : "#"}
+                      target={link === "Download App" ? "_blank" : undefined}
+                      rel={link === "Download App" ? "noopener noreferrer" : undefined}
+                      className="text-sm text-muted-foreground hover:text-secondary transition-colors"
+                    >
                       {link}
                     </a>
                   </li>

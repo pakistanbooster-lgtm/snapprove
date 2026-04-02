@@ -46,6 +46,7 @@ const Navbar = () => {
           <a href="#how-it-works" className="block text-sm font-medium text-muted-foreground" onClick={() => setOpen(false)}>How It Works</a>
           <a href="#demo" className="block text-sm font-medium text-muted-foreground" onClick={() => setOpen(false)}>Demo</a>
           <a href="#pricing" className="block text-sm font-medium text-muted-foreground" onClick={() => setOpen(false)}>Pricing</a>
+          <a href="https://drive.google.com/file/d/1MKv5OZEzVzuUPnlpNFBYQG-1eqwC-NsQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="block text-sm font-medium text-muted-foreground" onClick={() => setOpen(false)}>Download App</a>
           <GetStartedForm trigger={<Button className="w-full gradient-primary border-0 rounded-full" size="sm">Get Started</Button>} />
         </div>
       )}
